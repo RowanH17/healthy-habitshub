@@ -21,14 +21,6 @@ setInterval(updateSlider, 5000);
 // Initial slider setup
 updateSlider();
 
-// Accordion Functionality
-document.querySelectorAll(".accordion-header").forEach(header => {
-    header.addEventListener("click", () => {
-        const content = header.nextElementSibling;
-        content.style.display = content.style.display === "block" ? "none" : "block";
-    });
-});
-
 // Function to fetch recipes from TheMealDB API
 async function fetchRecipes() {
     const query = document.getElementById("search-query").value.trim(); // Get search query
